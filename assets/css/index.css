@@ -114,6 +114,7 @@ p {
 
 #sky-blue-background {
     background-color: var(--light-blue);
+    height: 90vh;
 }
 
 input[type='text']::placeholder, 
@@ -164,7 +165,18 @@ h1 {
 .form-controls {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    /* Move to the center */
+    transform: translateX(-50%);
+    /* Adjust to center the element */
+    height: 10vh;
+    width: 100vw;
+}
+
+.form-controls > div {
+    padding-left: 10px;
+    padding-right: 10px;
 }

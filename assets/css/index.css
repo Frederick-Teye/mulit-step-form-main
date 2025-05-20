@@ -180,3 +180,78 @@ h1 {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+@media screen and (min-width: 578px) {
+    nav {
+        background-image: url(../images/bg-sidebar-desktop.svg);
+        --navbar-height: 100%;
+        border-radius: 5px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #nav-container {
+        grid-column: 1 / 4;
+    }
+
+    form {
+        position: static;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0%;
+        height: 100%;
+    }    
+
+    .form-controls {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: auto;
+        padding: 0%;
+    }
+
+    .form-controls > div {
+        padding: 0%;
+    }
+
+    /* .form-field {
+        box-sizing: border-box;
+    } */
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'] {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    #white-background {
+        background-color: white;
+        width: 60vw;
+        height: 71vh;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        border-radius: 5px;
+        padding: 8px;
+    }
+
+    #sky-blue-background {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main-container {
+        grid-column: 4 / 11;
+        height: 100%;
+    }
+
+    .next-btn {
+        margin-left: auto;
+    }
+}

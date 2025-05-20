@@ -20,7 +20,9 @@
               <div>
                 <a href="">
 
-                  <div class="nav-number">1</div>
+                  <div class="nav-number">
+                    <div>1</div>
+                  </div>
                   <div class="nav-text">
                     <div class="nav-secondary-text">STEP 1</div>
                     <div class="nav-primary-text">YOUR INFO</div>
@@ -33,7 +35,9 @@
               <div>
                 <a href="">
 
-                  <div class="nav-number">2</div>
+                  <div class="nav-number">
+                    <div>2</div>
+                  </div>
                   <div class="nav-text">
                     <div class="nav-secondary-text">STEP 2</div>
                     <div class="nav-primary-text">SELECT PLAN</div>
@@ -46,7 +50,9 @@
               <div>
                 <a href="">
 
-                  <div class="nav-number">3</div>
+                  <div class="nav-number">
+                    <div>3</div>
+                  </div>
                   <div class="nav-text">
                     <div class="nav-secondary-text">STEP 3</div>
                     <div class="nav-primary-text">ADD-ONS</div>
@@ -59,7 +65,9 @@
               <div>
                 <a href="">
 
-                  <div class="nav-number">4</div>
+                  <div class="nav-number">
+                    <div>4</div>
+                  </div>
                   <div class="nav-text">
                     <div class="nav-secondary-text">STEP 4</div>
                     <div class="nav-primary-text">SUMMARY</div>
@@ -87,17 +95,26 @@
   
               <div class="form-field">
                 <div class="text-input">
-                  <label for="name">Name</label><br>
+                  <div class="label">
+                    <label for="name">Name</label>
+                    <div id="name-required" aria-hidden="true">This field is required</div>
+                  </div>
                   <input type="text" id="name" placeholder="e.g. Stephen King">
                 </div>
   
                 <div class="text-input">
-                  <label for="email">Email Address</label><br>
+                  <div class="label">
+                    <label for="email">Email Address</label>
+                    <div id="email-required" aria-hidden="true">This field is required</div>
+                  </div>
                   <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
                 </div>
   
                 <div class="text-input">
-                  <label for="phone">Phone Number</label><br>
+                  <div class="label">
+                    <label for="phone">Phone Number</label>
+                    <div id="phone-required" aria-hidden="true">This field is required</div>
+                  </div>
                   <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
                 </div>
               </div>

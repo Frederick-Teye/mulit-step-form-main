@@ -12,6 +12,7 @@
 
     --paragraph-font-size: 16px;
     --navbar-height: 150px;
+    --rounded-corner: 8px;
 }
 
 
@@ -91,7 +92,7 @@ button {
     cursor: pointer;
     /* outline: inherit; */
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: var(--rounded-corner);
 }
 
 
@@ -100,7 +101,7 @@ form {
     margin-left: 5%;
     margin-right: 5%;
     padding: 3% 6% 6%;
-    border-radius: 3%;
+    border-radius: var(--rounded-corner);
     position: relative;
     bottom: 53px;
 }
@@ -122,6 +123,20 @@ input[type='tel']::placeholder,
 input[type='email']::placeholder {
     font-weight: bold;
     color: var(--cool-gray);
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'] {
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+input[type='text']:focus,
+input[type='tel']:focus,
+input[type='email']:focus {
+    border: 1px solid var(--purplish-blue);
+    outline: none;
 }
 
 
@@ -153,7 +168,7 @@ input {
     padding: 10px 15px;
     border-width: 1px;
     border-style: solid;
-    border-radius: 5px;
+    border-radius: var(--rounded-corner);
 }
 
 
@@ -186,7 +201,7 @@ h1 {
     nav {
         background-image: url(../images/bg-sidebar-desktop.svg);
         --navbar-height: 100%;
-        border-radius: 5px;
+        border-radius: var(--rounded-corner);
         width: 100%;
         background-position: center;
         background-size: cover;
@@ -234,7 +249,7 @@ h1 {
         height: 71vh;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
-        border-radius: 5px;
+        border-radius: var(--rounded-corner);
         padding: 8px;
     }
 

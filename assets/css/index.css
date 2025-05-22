@@ -206,7 +206,7 @@ h1 {
     margin-bottom: 0;
 }
 
-.form-controls {
+#form-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,7 +220,7 @@ h1 {
     width: 100vw;
 }
 
-.form-controls > div {
+#form-controls > div {
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -259,7 +259,7 @@ h1 {
         height: 100%;
     }    
 
-    .form-controls {
+    #form-controls {
         position: static;
         transform: none;
         width: 100%;
@@ -267,7 +267,7 @@ h1 {
         padding: 0%;
     }
 
-    .form-controls > div {
+    #form-controls > div {
         padding: 0%;
     }
 

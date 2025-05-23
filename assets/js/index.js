@@ -1,17 +1,6 @@
 (
     function () {
 
-        /** 
-         * I don't know the platform I will be hosting the site, so I have to store and use
-         * the first url that get's loaded when the website get's loaded  */
-        let homeURL = "";
-        let counter = 0;
-
-        if (counter === 0) {
-            homeURL = window.location.href;
-            ++counter;
-        }
-
         /**
          * This is to change the submit button when the user is on either mobile or desktop
          */

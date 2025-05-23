@@ -93,13 +93,15 @@ h1, label {
     justify-content: space-between;
 }
 
-.next-btn {
+.next-btn,
+#mobile-next-step-btn {
     background-color: var(--marine-blue);
     color: white;
     padding: 10px;
 }
 
-.next-btn:hover {
+.next-btn:hover,
+#mobile-next-step-btn {
     background-color: var(--purplish-blue);
 }
 
@@ -172,10 +174,6 @@ input[type='email']:focus {
     }
 }
 
-@media screen and (max-width: 578px) {
-
-}
-
 .text-input {
     margin-bottom: 15px;
 }
@@ -220,9 +218,17 @@ h1 {
     width: 100vw;
 }
 
-#form-controls > div {
-    padding-left: 10px;
-    padding-right: 10px;
+#form-controls > div,
+#second-form-controls>div {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#second-form-controls {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
 }
 
 

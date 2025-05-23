@@ -16,7 +16,6 @@
          * This is to change the submit button when the user is on either mobile or desktop
          */
         function changeFormControl() {
-            alert('changeFormControl() was called!!!\n' + 'Screen size: ' + screen.width);
             const desktopFormControls = document.getElementById('form-controls');
             const mobileFormControls = document.getElementById("second-form-controls");
             const mobileGoBackButton = document.getElementById('mobile-go-back-btn');

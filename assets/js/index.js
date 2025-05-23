@@ -17,7 +17,7 @@
                     mobileFormControls.style.display = 'flex';
                 }
 
-                if (window.location.href === homeURL) {
+                if (window.location.pathname === "/") {
                     mobileGoBackButton.style.display = 'none';
                     mobileGoBackButton.setAttribute('aria-hidden', 'true');
                 } else {

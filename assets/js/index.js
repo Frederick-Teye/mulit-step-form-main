@@ -52,11 +52,11 @@
           };
           
           const routes = {
-            404: "../../pages/404.html",
-            "/mulit-step-form-main/": "../../pages/your-info.html",
-            "select-plan": "../../pages/select-plan.html",
-            "add-ons": "../../pages/add-ons.html",
-            "summary": "../../pages/summary.html"
+            404: "pages/404.html",
+            "/mulit-step-form-main/": "pages/your-info.html",
+            "select-plan": "pages/select-plan.html",
+            "add-ons": "pages/add-ons.html",
+            "summary": "pages/summary.html"
           };
           
           const handleLocation = async () => {

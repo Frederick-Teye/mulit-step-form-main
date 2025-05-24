@@ -54,9 +54,9 @@
           const routes = {
             404: "../../pages/404.html",
             "/mulit-step-form-main/": "../../pages/your-info.html",
-            "mulit-step-form-main/select-plan": "../../pages/select-plan.html",
-            "mulit-step-form-main/add-ons": "../../pages/add-ons.html",
-            "mulit-step-form-main/summary": "../../pages/summary.html"
+            "select-plan": "../../pages/select-plan.html",
+            "add-ons": "../../pages/add-ons.html",
+            "summary": "../../pages/summary.html"
           };
           
           const handleLocation = async () => {

@@ -6,12 +6,12 @@
          */
         const route = (event) => {
             event.preventDefault();
-            window.history.pushState({}, "", event.target.href);
+            window.location.hash = event.target.getAttribute("href");
+            alert(window.location.hash);
             handleLocation();
           };
           
           const routes = {
-            404: "assets/js/pages/404.html",
 
             "/mulit-step-form-main/": `
             <form action="">
@@ -64,22 +64,66 @@
                 </div>
             </form>
             `,
-            "select-plan": "assets/js/pages/select-plan.html",
+
+            "select-plan": `
+            <form action="">
+                <div class="main-form">
+                    <div class="contain-form-content">
+
+                        <div class="form-header">
+                            <h1>
+                                Personal info
+                            </h1>
+                            <p>
+                                Please provide your name, email address, and phone number.
+                            </p>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="text-input">
+                                <div class="label">
+                                    <label for="name">Name</label>
+                                    <div id="name-required" aria-hidden="true">This field is required</div>
+                                </div>
+                                <input type="text" id="name" placeholder="e.g. Stephen King">
+                            </div>
+
+                            <div class="text-input">
+                                <div class="label">
+                                    <label for="email">Email Address</label>
+                                    <div id="email-required" aria-hidden="true">This field is required</div>
+                                </div>
+                                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                            </div>
+
+                            <div class="text-input">
+                                <div class="label">
+                                    <label for="phone">Phone Number</label>
+                                    <div id="phone-required" aria-hidden="true">This field is required</div>
+                                </div>
+                                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="form-controls">
+                    <div></div>
+
+                    <div>
+                        <button class="next-btn">Next Step</button>
+                    </div>
+                </div>
+            </form>
+            `,
+
             "add-ons": "assets/js/pages/add-ons.html",
             "summary": "assets/js/pages/summary.html"
           };
           
           function handleLocation() {
-            alert("Got here!");
-            let path = window.location.pathname;
-            if (path == "/") {
-                alert("Path was /");
-                path = '/mulit-step-form-main/';
-                window.history.pushState({}, "", path);
-                alert(path);
-            }
-            let html = routes[path] || routes[404];
-            document.getElementById("main-container").innerHTML = html;
+            const path = window.location.hash.replace("#", "");
+            document.getElementById("main-container").innerHTML = routes[path] || routes["/mulit-step-form-main/"];
         }
           
           window.onpopstate = handleLocation;

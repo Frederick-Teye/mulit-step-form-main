@@ -2,6 +2,93 @@
     function () {
 
         /**
+         * Routing Code
+         */
+        const route = (event) => {
+            event.preventDefault();
+            window.history.pushState({}, "", event.target.href);
+            handleLocation();
+          };
+          
+          const routes = {
+            404: "assets/js/pages/404.html",
+
+            "/mulit-step-form-main/": `
+            <form action="">
+                <div class="main-form">
+                    <div class="contain-form-content">
+
+                        <div class="form-header">
+                            <h1>
+                                Personal info
+                            </h1>
+                            <p>
+                                Please provide your name, email address, and phone number.
+                            </p>
+                        </div>
+
+                        <div class="form-field">
+                            <div class="text-input">
+                                <div class="label">
+                                    <label for="name">Name</label>
+                                    <div id="name-required" aria-hidden="true">This field is required</div>
+                                </div>
+                                <input type="text" id="name" placeholder="e.g. Stephen King">
+                            </div>
+
+                            <div class="text-input">
+                                <div class="label">
+                                    <label for="email">Email Address</label>
+                                    <div id="email-required" aria-hidden="true">This field is required</div>
+                                </div>
+                                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                            </div>
+
+                            <div class="text-input">
+                                <div class="label">
+                                    <label for="phone">Phone Number</label>
+                                    <div id="phone-required" aria-hidden="true">This field is required</div>
+                                </div>
+                                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="form-controls">
+                    <div></div>
+
+                    <div>
+                        <button class="next-btn">Next Step</button>
+                    </div>
+                </div>
+            </form>
+            `,
+            "select-plan": "assets/js/pages/select-plan.html",
+            "add-ons": "assets/js/pages/add-ons.html",
+            "summary": "assets/js/pages/summary.html"
+          };
+          
+          function handleLocation() {
+            alert("Got here!");
+            let path = window.location.pathname;
+            if (path == "/") {
+                alert("Path was /");
+                path = '/mulit-step-form-main/';
+                window.history.pushState({}, "", path);
+                alert(path);
+            }
+            let html = routes[path] || routes[404];
+            document.getElementById("main-container").innerHTML = html;
+        }
+          
+          window.onpopstate = handleLocation;
+          window.route = route;
+          
+          handleLocation();
+
+
+        /**
          * This is to change the submit button when the user is on either mobile or desktop
          */
         function changeFormControl() {
@@ -41,35 +128,7 @@
         window.addEventListener('resize', changeFormControl);
 
 
-        /**
-         * Routing Code
-         */
-        const route = (event) => {
-            event = event || window.event;
-            event.preventDefault();
-            window.history.pushState({}, "", event.target.href);
-            handleLocation();
-          };
-          
-          const routes = {
-            404: "assets/js/pages/404.html",
-            "/mulit-step-form-main/": "assets/js/pages/your-info.html",
-            "select-plan": "assets/js/pages/select-plan.html",
-            "add-ons": "assets/js/pages/add-ons.html",
-            "summary": "assets/js/pages/summary.html"
-          };
-          
-          const handleLocation = async () => {
-            const path = window.location.pathname;
-            const route = routes[path] || routes[404];
-            const html = await fetch(route).then((data) => data.text());
-            document.getElementById("main-container").innerHTML = html;
-          };
-          
-          window.onpopstate = handleLocation;
-          window.route = route;
-          
-          handleLocation();
+        
 
 
     }

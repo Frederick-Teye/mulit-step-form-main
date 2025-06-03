@@ -5,6 +5,7 @@
          * Routing Code
          */
         const route = (event) => {
+            alert(window.location.hash);
             event.preventDefault();
             window.location.hash = event.target.getAttribute("href");
             alert(window.location.hash);
@@ -13,7 +14,7 @@
           
           const routes = {
 
-            "/mulit-step-form-main/": `
+            "#/mulit-step-form-main/": `
             <form action="">
                 <div class="main-form">
                     <div class="contain-form-content">
@@ -65,7 +66,7 @@
             </form>
             `,
 
-            "select-plan": `
+            "#/select-plan": `
             <form action="">
                 <div class="main-form">
                     <div class="contain-form-content">
@@ -117,13 +118,13 @@
             </form>
             `,
 
-            "add-ons": "assets/js/pages/add-ons.html",
-            "summary": "assets/js/pages/summary.html"
+            "#/add-ons": "assets/js/pages/add-ons.html",
+            "#/summary": "assets/js/pages/summary.html"
           };
           
           function handleLocation() {
-            const path = window.location.hash.replace("#", "");
-            document.getElementById("main-container").innerHTML = routes[path] || routes["/mulit-step-form-main/"];
+            const path = window.location.hash;
+            document.getElementById("main-container").innerHTML = routes[path] || routes["#/mulit-step-form-main/"];
         }
           
           window.onpopstate = handleLocation;

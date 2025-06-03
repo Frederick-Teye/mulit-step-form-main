@@ -5,10 +5,8 @@
          * Routing Code
          */
         const route = (event) => {
-            alert(window.location.hash);
             event.preventDefault();
             window.location.hash = event.target.getAttribute("href");
-            alert(window.location.hash);
             handleLocation();
           };
           

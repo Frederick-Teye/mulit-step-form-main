@@ -81,44 +81,46 @@
                             </p>
                         </div>
 
-                        <div class="form-field">
-                            <div class="text-input">
-                                <input type="radio" id="arcade" name="plan">
-                                <label for="arcade" class="plan-label">
-                                    <div class='price-icon'>
-                                        <image src="./assets/images/icon-arcade.svg" alt="arcade-icon">
-                                    </div>
-                                    <div>
-                                        <div for="arcade">Arcade</div>
-                                        <div class="price">$9/mo</div>
-                                    </div>
-                                </label>
-                            </div>
+                        <div id="radio-buttons">
+                            <div class="form-field">
+                                <div class="text-input">
+                                    <input type="radio" id="arcade" name="plan">
+                                    <label for="arcade" class="plan-label">
+                                        <div class='price-icon'>
+                                            <image src="./assets/images/icon-arcade.svg" alt="arcade-icon">
+                                        </div>
+                                        <div>
+                                            <div for="arcade">Arcade</div>
+                                            <div class="price">$9/mo</div>
+                                        </div>
+                                    </label>
+                                </div>
 
-                            <div class="text-input">
-                                <input type="radio" id="advanced" name="plan">
-                                <label for="advanced" class="plan-label">
-                                    <div class='price-icon'>
-                                        <image src="./assets/images/icon-advanced.svg" alt="advanced-icon">
-                                    </div>
-                                    <div>
-                                        <div>Advanced</div>
-                                        <div class="price">$12/mo</div>
-                                    </div>
-                                </label>
-                            </div>
+                                <div class="text-input">
+                                    <input type="radio" id="advanced" name="plan">
+                                    <label for="advanced" class="plan-label">
+                                        <div class='price-icon'>
+                                            <image src="./assets/images/icon-advanced.svg" alt="advanced-icon">
+                                        </div>
+                                        <div>
+                                            <div>Advanced</div>
+                                            <div class="price">$12/mo</div>
+                                        </div>
+                                    </label>
+                                </div>
 
-                            <div class="text-input">
-                                <input type="radio" id="pro" name="plan">
-                                <label for="pro" class="plan-label">
-                                    <div class='price-icon'>
-                                        <image src="./assets/images/icon-pro.svg" alt="advanced-icon">
-                                    </div>
-                                    <div>
-                                        <div>Pro</div>
-                                        <div class="price">$15/mo</div>
-                                    </div>
-                                </label>
+                                <div class="text-input">
+                                    <input type="radio" id="pro" name="plan">
+                                    <label for="pro" class="plan-label">
+                                        <div class='price-icon'>
+                                            <image src="./assets/images/icon-pro.svg" alt="advanced-icon">
+                                        </div>
+                                        <div>
+                                            <div>Pro</div>
+                                            <div class="price">$15/mo</div>
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
                         </div>
 

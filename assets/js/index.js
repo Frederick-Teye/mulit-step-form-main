@@ -1,18 +1,15 @@
-(
-    function () {
+(function () {
+  /**
+   * Routing Code
+   */
+  const route = (event) => {
+    event.preventDefault();
+    window.location.hash = event.target.getAttribute("href");
+    handleLocation();
+  };
 
-        /**
-         * Routing Code
-         */
-        const route = (event) => {
-            event.preventDefault();
-            window.location.hash = event.target.getAttribute("href");
-            handleLocation();
-          };
-          
-          const routes = {
-
-            "#/mulit-step-form-main/": `
+  const routes = {
+    "#/mulit-step-form-main/": `
             <form action="">
                 <div class="main-form">
                     <div class="contain-form-content">
@@ -64,7 +61,7 @@
             </form>
             `,
 
-            "#/select-plan": `
+    "#/select-plan": `
             <form action="">
                 <div class="main-form">
                     <div class="contain-form-content">
@@ -116,63 +113,57 @@
             </form>
             `,
 
-            "#/add-ons": "assets/js/pages/add-ons.html",
-            "#/summary": "assets/js/pages/summary.html"
-          };
-          
-          function handleLocation() {
-            const path = window.location.hash;
-            document.getElementById("main-container").innerHTML = routes[path] || routes["#/mulit-step-form-main/"];
-        }
-          
-          window.onpopstate = handleLocation;
-          window.route = route;
-          
-          handleLocation();
+    "#/add-ons": "assets/js/pages/add-ons.html",
+    "#/summary": "assets/js/pages/summary.html",
+  };
 
+  function handleLocation() {
+    const path = window.location.hash;
+    document.getElementById("main-container").innerHTML =
+      routes[path] || routes["#/mulit-step-form-main/"];
+  }
 
-        /**
-         * This is to change the submit button when the user is on either mobile or desktop
-         */
-        function changeFormControl() {
-            const desktopFormControls = document.getElementById('form-controls');
-            const mobileFormControls = document.getElementById("second-form-controls");
-            const mobileGoBackButton = document.getElementById('mobile-go-back-btn');
+  window.onpopstate = handleLocation;
+  window.route = route;
 
-            if (screen.width < 578) {
-                desktopFormControls.style.display = 'none';
-                desktopFormControls.setAttribute('aria-hidden', 'true');
-                if (mobileFormControls.getAttribute('aria-hidden') === 'true') {
-                    mobileFormControls.setAttribute('aria-hidden', 'false');
-                    mobileFormControls.style.display = 'flex';
-                }
+  handleLocation();
 
-                if (window.location.pathname === "/") {
-                    mobileGoBackButton.style.display = 'none';
-                    mobileGoBackButton.setAttribute('aria-hidden', 'true');
-                } else {
-                    mobileGoBackButton.style.display = 'block';
-                    mobileGoBackButton.setAttribute('aria-hidden', 'false');
-                }
-            } else {
-                mobileFormControls.style.display = 'none';
-                mobileFormControls.setAttribute('aria-hidden', 'true')
-                if (desktopFormControls.getAttribute('aria-hidden') === 'true') {
-                    desktopFormControls.setAttribute('aria-hidden', 'false');
-                    desktopFormControls.style.display = 'flex';
-                }
-            }
-        }
-        
-        // call changeFormControl() when the page is first loaded
-        changeFormControl();
+  /**
+   * This is to change the submit button when the user is on either mobile or desktop
+   */
+  function changeFormControl() {
+    const desktopFormControls = document.getElementById("form-controls");
+    const mobileFormControls = document.getElementById("second-form-controls");
+    const mobileGoBackButton = document.getElementById("mobile-go-back-btn");
 
-        // call changeFormControl() when the browser size is changed.
-        window.addEventListener('resize', changeFormControl);
+    if (screen.width < 578) {
+      desktopFormControls.style.display = "none";
+      desktopFormControls.setAttribute("aria-hidden", "true");
+      if (mobileFormControls.getAttribute("aria-hidden") === "true") {
+        mobileFormControls.setAttribute("aria-hidden", "false");
+        mobileFormControls.style.display = "flex";
+      }
 
-
-        
-
-
+      if (window.location.pathname === "/") {
+        mobileGoBackButton.style.display = "none";
+        mobileGoBackButton.setAttribute("aria-hidden", "true");
+      } else {
+        mobileGoBackButton.style.display = "block";
+        mobileGoBackButton.setAttribute("aria-hidden", "false");
+      }
+    } else {
+      mobileFormControls.style.display = "none";
+      mobileFormControls.setAttribute("aria-hidden", "true");
+      if (desktopFormControls.getAttribute("aria-hidden") === "true") {
+        desktopFormControls.setAttribute("aria-hidden", "false");
+        desktopFormControls.style.display = "flex";
+      }
     }
-)();
+  }
+
+  // call changeFormControl() when the page is first loaded
+  changeFormControl();
+
+  // call changeFormControl() when the browser size is changed.
+  window.addEventListener("resize", changeFormControl);
+})();

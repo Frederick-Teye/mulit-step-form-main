@@ -1,98 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="assets/css/index.css">
-  
-  <title>Frontend Mentor | Multi-step form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
 
-</head>
-<body>
-  <div id="sky-blue-background">
-    <div id="white-background">
-      <div id="nav-container">
-        <nav>
-          <ul>
-            <li>
-              <div>
-                <a href="#/mulit-step-form-main/" onclick="route()">
-
-                  <div class="nav-number">
-                    <div>1</div>
-                  </div>
-                  <div class="nav-text">
-                    <div class="nav-secondary-text">STEP 1</div>
-                    <div class="nav-primary-text">YOUR INFO</div>
-                  </div>
-
-                </a>
-              </div>
-            </li>
-            <li>
-              <div>
-                <a href="#/select-plan" onclick="route()">
-
-                  <div class="nav-number">
-                    <div>2</div>
-                  </div>
-                  <div class="nav-text">
-                    <div class="nav-secondary-text">STEP 2</div>
-                    <div class="nav-primary-text">SELECT PLAN</div>
-                  </div>
-
-                </a>
-              </div>
-            </li>
-            <li>
-              <div>
-                <a href="#/add-ons" onclick="route()">
-
-                  <div class="nav-number">
-                    <div>3</div>
-                  </div>
-                  <div class="nav-text">
-                    <div class="nav-secondary-text">STEP 3</div>
-                    <div class="nav-primary-text">ADD-ONS</div>
-                  </div>
-
-                </a>
-              </div>
-            </li>
-            <li>
-              <div>
-                <a href="#/summary" onclick="route()">
-
-                  <div class="nav-number">
-                    <div>4</div>
-                  </div>
-                  <div class="nav-text">
-                    <div class="nav-secondary-text">STEP 4</div>
-                    <div class="nav-primary-text">SUMMARY</div>
-                  </div>
-
-                </a>
-              </div>
-            </li>
-          </ul>
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <div id="sky-blue-background">
+      <div id="white-background">
+        <div id="nav-container">
+          <nav>
+            <ul>
+              <li>
+                <div>
+                  <a href="#/mulit-step-form-main/" onclick="route()">
+                    <div class="nav-number">
+                      <div>1</div>
+                    </div>
+                    <div class="nav-text">
+                      <div class="nav-secondary-text">STEP 1</div>
+                      <div class="nav-primary-text">YOUR INFO</div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#/select-plan" onclick="route()">
+                    <div class="nav-number">
+                      <div>2</div>
+                    </div>
+                    <div class="nav-text">
+                      <div class="nav-secondary-text">STEP 2</div>
+                      <div class="nav-primary-text">SELECT PLAN</div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#/add-ons" onclick="route()">
+                    <div class="nav-number">
+                      <div>3</div>
+                    </div>
+                    <div class="nav-text">
+                      <div class="nav-secondary-text">STEP 3</div>
+                      <div class="nav-primary-text">ADD-ONS</div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a href="#/summary" onclick="route()">
+                    <div class="nav-number">
+                      <div>4</div>
+                    </div>
+                    <div class="nav-text">
+                      <div class="nav-secondary-text">STEP 4</div>
+                      <div class="nav-primary-text">SUMMARY</div>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
           </nav>
+        </div>
+        <div id="main-container"></div>
       </div>
-      <div id="main-container">
-        
+    </div>
+    <div id="second-form-controls">
+      <div>
+        <button id="mobile-go-back-btn">Go Back</button>
+      </div>
+      <div>
+        <button id="mobile-next-step-btn">Next Step</button>
       </div>
     </div>
-  </div>
-  <div id="second-form-controls">
-    <div>
-      <button id="mobile-go-back-btn">Go Back</button>
-    </div>
-    <div>
-      <button id="mobile-next-step-btn">Next Step</button>
-    </div>
-  </div>
-  
-  <script src="./assets/js/index.js"></script>
-</body>
+
+    <script src="./assets/js/index.js"></script>
+  </body>
 </html>

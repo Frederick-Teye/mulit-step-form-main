@@ -286,7 +286,7 @@ h1 {
   #white-background {
     background-color: white;
     width: 60vw;
-    height: 71vh;
+    /* height: 71vh; */
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     border-radius: var(--rounded-corner);
@@ -355,4 +355,41 @@ h1 {
     font-size: var(--paragraph-font-size);
     font-weight: bold;
   }
+}
+
+/* Styling for second page */
+.plan-label {
+  display: flex;
+  border: 1px solid var(--cool-gray);
+  border-radius: var(--rounded-corner);
+  padding: 15px;
+  cursor: pointer;
+}
+
+.price-icon {
+  margin-right: 15px;
+}
+
+input[type="radio"] {
+  position: absolute;
+  width: 40%;
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label {
+  border: 1px solid var(--marine-blue);
+  background-color: var(--magnolia);
+}
+
+.price-icon {
+  color: var(--marine-blue);
+}
+
+.plan-label > div:nth-child(2) > div:first-child {
+  font-weight: bold;
+  size: 13px;
+}
+
+.plan-label > div:nth-child(2) > div:nth-child(2) {
+  color: var(--cool-gray);
 }

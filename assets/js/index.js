@@ -6,6 +6,7 @@
     event.preventDefault();
     window.location.hash = event.target.getAttribute("href");
     handleLocation();
+    changeFormControl();
   };
 
   const link = document.querySelector("a");
@@ -148,7 +149,10 @@
           mobileFormControls.style.display = "flex";
         }
 
-        if (window.location.pathname === "/") {
+        if (
+          window.location.hash === "#/mulit-step-form-main/" ||
+          window.location.hash == ""
+        ) {
           mobileGoBackButton.style.display = "none";
           mobileGoBackButton.setAttribute("aria-hidden", "true");
         } else {

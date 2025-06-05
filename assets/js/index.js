@@ -74,36 +74,51 @@
 
                         <div class="form-header">
                             <h1>
-                                Personal info
+                                Select your plan
                             </h1>
                             <p>
-                                Please provide your name, email address, and phone number.
+                                You have the option of monthly or yearly billing.
                             </p>
                         </div>
 
                         <div class="form-field">
                             <div class="text-input">
-                                <div class="label">
-                                    <label for="name">Name</label>
-                                    <div id="name-required" aria-hidden="true">This field is required</div>
-                                </div>
-                                <input type="text" id="name" placeholder="e.g. Stephen King">
+                                <input type="radio" id="arcade" name="plan">
+                                <label for="arcade" class="plan-label">
+                                    <div class='price-icon'>
+                                        <image src="./assets/images/icon-arcade.svg" alt="arcade-icon">
+                                    </div>
+                                    <div>
+                                        <div for="arcade">Arcade</div>
+                                        <div class="price">$9/mo</div>
+                                    </div>
+                                </label>
                             </div>
 
                             <div class="text-input">
-                                <div class="label">
-                                    <label for="email">Email Address</label>
-                                    <div id="email-required" aria-hidden="true">This field is required</div>
-                                </div>
-                                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                                <input type="radio" id="advanced" name="plan">
+                                <label for="advanced" class="plan-label">
+                                    <div class='price-icon'>
+                                        <image src="./assets/images/icon-advanced.svg" alt="advanced-icon">
+                                    </div>
+                                    <div>
+                                        <div>Advanced</div>
+                                        <div class="price">$12/mo</div>
+                                    </div>
+                                </label>
                             </div>
 
                             <div class="text-input">
-                                <div class="label">
-                                    <label for="phone">Phone Number</label>
-                                    <div id="phone-required" aria-hidden="true">This field is required</div>
-                                </div>
-                                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+                                <input type="radio" id="pro" name="plan">
+                                <label for="pro" class="plan-label">
+                                    <div class='price-icon'>
+                                        <image src="./assets/images/icon-pro.svg" alt="advanced-icon">
+                                    </div>
+                                    <div>
+                                        <div>Pro</div>
+                                        <div class="price">$15/mo</div>
+                                    </div>
+                                </label>
                             </div>
                         </div>
 

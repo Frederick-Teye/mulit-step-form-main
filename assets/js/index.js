@@ -13,7 +13,7 @@
 
   const routes = {
     "#/mulit-step-form-main/": `
-            <form action="">
+            <form action="" autocomplete="on">
                 <div class="main-form">
                     <div class="contain-form-content">
 

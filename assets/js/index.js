@@ -8,6 +8,9 @@
     handleLocation();
   };
 
+  const link = document.querySelector("a");
+  link.addEventListener("click", route);
+
   const routes = {
     "#/mulit-step-form-main/": `
             <form action="">
@@ -136,27 +139,29 @@
     const mobileFormControls = document.getElementById("second-form-controls");
     const mobileGoBackButton = document.getElementById("mobile-go-back-btn");
 
-    if (screen.width < 578) {
-      desktopFormControls.style.display = "none";
-      desktopFormControls.setAttribute("aria-hidden", "true");
-      if (mobileFormControls.getAttribute("aria-hidden") === "true") {
-        mobileFormControls.setAttribute("aria-hidden", "false");
-        mobileFormControls.style.display = "flex";
-      }
+    if (desktopFormControls && mobileFormControls && mobileGoBackButton) {
+      if (screen.width < 578) {
+        desktopFormControls.style.display = "none";
+        desktopFormControls.setAttribute("aria-hidden", "true");
+        if (mobileFormControls.getAttribute("aria-hidden") === "true") {
+          mobileFormControls.setAttribute("aria-hidden", "false");
+          mobileFormControls.style.display = "flex";
+        }
 
-      if (window.location.pathname === "/") {
-        mobileGoBackButton.style.display = "none";
-        mobileGoBackButton.setAttribute("aria-hidden", "true");
+        if (window.location.pathname === "/") {
+          mobileGoBackButton.style.display = "none";
+          mobileGoBackButton.setAttribute("aria-hidden", "true");
+        } else {
+          mobileGoBackButton.style.display = "block";
+          mobileGoBackButton.setAttribute("aria-hidden", "false");
+        }
       } else {
-        mobileGoBackButton.style.display = "block";
-        mobileGoBackButton.setAttribute("aria-hidden", "false");
-      }
-    } else {
-      mobileFormControls.style.display = "none";
-      mobileFormControls.setAttribute("aria-hidden", "true");
-      if (desktopFormControls.getAttribute("aria-hidden") === "true") {
-        desktopFormControls.setAttribute("aria-hidden", "false");
-        desktopFormControls.style.display = "flex";
+        mobileFormControls.style.display = "none";
+        mobileFormControls.setAttribute("aria-hidden", "true");
+        if (desktopFormControls.getAttribute("aria-hidden") === "true") {
+          desktopFormControls.setAttribute("aria-hidden", "false");
+          desktopFormControls.style.display = "flex";
+        }
       }
     }
   }

@@ -4,13 +4,15 @@
    */
   const route = (event) => {
     event.preventDefault();
-    window.location.hash = event.target.getAttribute("href");
+    window.location.hash = event.currentTarget.getAttribute("href");
     handleLocation();
     changeFormControl();
-  };
+  }
 
-  const link = document.querySelector("a");
-  link.addEventListener("click", route);
+  const links = document.getElementsByTagName("a");
+  for (const link of links) {
+    link.addEventListener("click", route);
+  }
 
   const routes = {
     "#/mulit-step-form-main/": `

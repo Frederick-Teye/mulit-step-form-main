@@ -7,7 +7,7 @@
     window.location.hash = event.currentTarget.getAttribute("href");
     handleLocation();
     changeFormControl();
-  }
+  };
 
   const links = document.getElementsByTagName("a");
   for (const link of links) {
@@ -35,7 +35,7 @@
                                     <label for="name">Name</label>
                                     <div id="name-required" aria-hidden="true">This field is required</div>
                                 </div>
-                                <input type="text" id="name" placeholder="e.g. Stephen King">
+                                <input type="text" id="name" placeholder="e.g. Joyce Teye" autocomplete="on">
                             </div>
 
                             <div class="text-input">
@@ -43,7 +43,7 @@
                                     <label for="email">Email Address</label>
                                     <div id="email-required" aria-hidden="true">This field is required</div>
                                 </div>
-                                <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+                                <input type="email" id="email" placeholder="e.g. joyceteye@lorem.com" autocomplete="email">
                             </div>
 
                             <div class="text-input">
@@ -51,7 +51,7 @@
                                     <label for="phone">Phone Number</label>
                                     <div id="phone-required" aria-hidden="true">This field is required</div>
                                 </div>
-                                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+                                <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" autocomplete="tel-country-code">
                             </div>
                         </div>
 
